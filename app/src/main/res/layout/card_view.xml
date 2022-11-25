@@ -1,0 +1,70 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="4dp"
+    card_view:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imagen"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/imagen"
+            android:fontFamily="@font/almendra_sc"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+
+            android:id="@+id/visitas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nombre"
+            android:layout_alignLeft="@+id/nombre"
+            android:fontFamily="@font/almendra_sc"
+            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <View
+            android:id="@+id/linea"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_above="@+id/compartir"
+            android:layout_toRightOf="@+id/imagen"
+            android:background="#000000"
+            android:backgroundTint="#100F0F"
+            android:foregroundTint="@color/design_default_color_surface"></View>
+        <ImageView
+            android:id="@+id/compartir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toStartOf="@+id/enviar"
+            android:background="@color/teal_700"
+            android:src="@drawable/ic_share" />
+
+        <ImageView
+            android:id="@+id/enviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/teal_700"
+            android:src="@drawable/ic_send" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
